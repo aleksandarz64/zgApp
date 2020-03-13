@@ -4,7 +4,7 @@ pipeline {
     APP_NAME = 'ZG-APP'
     BUILD_NUMBER = "${env.BUILD_NUMBER}"
     IMAGE_VERSION="v_${BUILD_NUMBER}"
-    GIT_URL="https://github.com/aleksandarz64/zgWapp.git"
+    GIT_URL="https://github.com/aleksandarz64/zgApp.git"
     }
     stages {
         stage('Initialize'){
