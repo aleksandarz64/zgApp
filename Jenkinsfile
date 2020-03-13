@@ -25,7 +25,8 @@ pipeline {
               echo 'MAVEN clean..'
               sh 'cd /var/lib/jenkins/workspace/${APP_NAME}'
               sh 'pwd'
-              sh '${MVN_CMD} clean'
+              def mvnHome = tool name: '', type: 'maven'
+              sh '${mvnHome}/bin/mvn clean'
 
             }
         }
