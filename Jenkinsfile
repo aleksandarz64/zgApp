@@ -32,6 +32,7 @@ pipeline {
             steps {
               sh 'MAVEN Compile..'
               sh 'cd /var/lib/jenkins/workspace/${APP_NAME}'
+              sh 'pwd'
               sh 'mvn compile'
             }
         }
