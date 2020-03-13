@@ -7,6 +7,9 @@ pipeline {
     GIT_URL="https://github.com/aleksandarz64/zgApp.git"
     MVN_CMD='/usr/bin/mvn'
     }
+    tools {
+        maven "Maven"
+    }
     stages {
         stage('Initialize'){
             steps {
@@ -25,7 +28,7 @@ pipeline {
               echo 'MAVEN clean..'
               sh 'cd /var/lib/jenkins/workspace/${APP_NAME}'
               sh 'pwd'
-              sh '${MVN_CMD} clean'
+              sh 'mvn clean'
 
             }
         }
