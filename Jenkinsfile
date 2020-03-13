@@ -5,6 +5,7 @@ pipeline {
     BUILD_NUMBER = "${env.BUILD_NUMBER}"
     IMAGE_VERSION="v_${BUILD_NUMBER}"
     GIT_URL="https://github.com/aleksandarz64/zgApp.git"
+    MVN_CMD='/usr/bin/mvn'
     }
     stages {
         stage('Initialize'){
@@ -24,7 +25,7 @@ pipeline {
               echo 'MAVEN clean..'
               sh 'cd /var/lib/jenkins/workspace/${APP_NAME}'
               sh 'pwd'
-              sh 'mvn clean'
+              sh '${MVN_CMD} clean'
 
             }
         }
@@ -33,7 +34,7 @@ pipeline {
               sh 'MAVEN Compile..'
               sh 'cd /var/lib/jenkins/workspace/${APP_NAME}'
               sh 'pwd'
-              sh 'mvn compile'
+              sh '${MVN_CMD} compile'
             }
         }
     }
