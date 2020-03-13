@@ -8,7 +8,7 @@ pipeline {
     MVN_CMD='/usr/bin/mvn'
     }
     tools {
-        maven "Maven"
+        maven "3.6.3"
     }
     stages {
         stage('Initialize'){
