@@ -15,7 +15,8 @@ pipeline {
         }
         stage('Git checkout code'){
             steps {
-                  git "${GIT_URL}" 
+                echo 'Git checkout started..'
+                git "${GIT_URL}" 
             }
         }
         stage('Mvn clean') {
